@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Transit Alarm for MTA</string>
+    <string name="title_activity_main">Transit Alarm for MTA</string>
+    <string name="package_name">com.patrickstankard.mta</string>
+    <string name="custom_url_scheme">com.patrickstankard.mta</string>
+</resources>

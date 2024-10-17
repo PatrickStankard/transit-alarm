@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Transit Alarm for MTA</title>
+        <meta
+            name="viewport"
+            content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
+        />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="msapplication-tap-highlight" content="no" />
+        <meta name="description" content="Transit Alarm for MTA is a location-based notification app for New York and Connecticut public transportation that will notify you when you're approaching your destination. Available for web, iOS, and Android." />
+        <meta name="google" content="nositelinkssearchbox">
+        <link rel="icon" href="./favicon.ico" />
+        <link rel="manifest" href="./manifest.webmanifest" />
+        <link rel="stylesheet" href="./css/bootstrap.min.css" />
+        <link rel="stylesheet" href="./css/index.css" />
+        <link rel="stylesheet" href="./css/color-cubes.css" />
+        <link rel="stylesheet" href="./css/app-store-badges.css" />
+    </head>
+    <body class="user-select-none">
+        <!-- Start BodyContainer -->
+        <div id="body-container" class="d-flex align-items-center justify-content-center vh-100">
+            <!-- Start LoadingSpinnerContainer -->
+            <div id="loading-spinner-container" class="d-flex align-items-center justify-content-center vh-100">
+                <div class="spinner-border" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                </div>
+            </div>
+            <!-- End LoadingSpinnerContainer -->
+            <!-- Start BodyContentContainer -->
+            <div id="body-content-container" class="container d-none">
+                <!-- Start ColorCubes -->
+                <div class="row">
+                    <div class="col">
+                        <div id="color-cubes-container" class="container d-none">
+                            <div class="row">
+                                <div id="color-cubes-0" class="col-3 p-2"></div>
+                                <div id="color-cubes-1" class="col-3 p-2"></div>
+                                <div id="color-cubes-2" class="col-3 p-2"></div>
+                                <div id="color-cubes-3" class="col-3 p-2"></div>
+                            </div>
+                            <div class="row">
+                                <div id="color-cubes-4" class="col-3 p-2"></div>
+                                <div id="color-cubes-5" class="col-3 p-2"></div>
+                                <div id="color-cubes-6" class="col-3 p-2"></div>
+                                <div id="color-cubes-7" class="col-3 p-2"></div>
+                            </div>
+                            <div class="row">
+                                <div id="color-cubes-8" class="col-3 p-2"></div>
+                                <div id="color-cubes-9" class="col-3 p-2"></div>
+                                <div id="color-cubes-10" class="col-3 p-2"></div>
+                                <div id="color-cubes-11" class="col-3 p-2"></div>
+                            </div>
+                            <div class="row">
+                                <div id="color-cubes-12" class="col-3 p-2"></div>
+                                <div id="color-cubes-13" class="col-3 p-2"></div>
+                                <div id="color-cubes-14" class="col-3 p-2"></div>
+                                <div id="color-cubes-15" class="col-3 p-2"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- End ColorCubes -->
+                <!-- Start TransitAlarmControls -->
+                <div id="transit-alarm-controls" class="row">
+                    <div class="col">
+                        <div class="position-relative">
+                            <div class="mt-3 text-center">
+                                <h5 class="mb-2">Transit Alarm for MTA</h5>
+                                <p class="px-4">Set an alarm to be notified when you're approaching your destination.</p>
+                            </div>
+                            <div id="transit-alarm-controls-form-container" class="mt-4 d-none">
+                                <form>
+                                    <div class="mb-3 pt-1">
+                                        <div id="mta-service" class="btn-group btn-group-lg w-100" role="group" aria-label="MTA service">
+                                            <input type="radio" class="btn-check shadow-none" name="mta-service-radio" id="lirr-service" autocomplete="off" checked disabled>
+                                            <label class="btn btn-outline-secondary" for="lirr-service">LIRR 🚆</label>
+                                            <input type="radio" class="btn-check shadow-none" name="mta-service-radio" id="mnr-service" autocomplete="off" disabled>
+                                            <label class="btn btn-outline-secondary" for="mnr-service">MNR 🚆</label>
+                                            <input type="radio" class="btn-check shadow-none" name="mta-service-radio" id="nyct-service" autocomplete="off" disabled>
+                                            <label class="btn btn-outline-secondary" for="nyct-service">NYCT 🚇</label>
+                                        </div>
+                                    </div>
+                                    <div class="mb-3">
+                                        <select name="stations" id="stations" class="form-select form-select-lg shadow-none w-100" aria-label="Select your destination" disabled>
+                                            <option value="" selected>Select LIRR destination:</option>
+                                        </select>
+                                    </div>
+                                    <button type="button" id="set-alarm" class="btn btn-primary btn-lg shadow-none w-100" disabled>Set alarm</button>
+                                    <button type="button" id="clear-alarm" class="btn btn-lg btn-danger shadow-none w-100 d-none" disabled>Clear alarm</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- End TransitAlarmControls -->
+                <!-- Start AppStoreBadges -->
+                <div id="app-store-badges" class="row d-none">
+                    <div class="col">
+                        <div class="position-relative">
+                            <div class="w-100 mt-5 mb-5">
+                                <div class="text-center mb-4">
+                                    <span class="px-1">
+                                        <a class="link-underline link-underline-opacity-0" href="https://apps.apple.com/us/app/transit-alarm-for-mta/id6736602401" title="Download Transit Alarm for MTA on the Apple App Store" target="_blank">
+                                            <img class="app-store-badge rounded" src="/png/apple-app-store-badge.png" alt="Download Transit Alarm for MTA on the Apple App Store">
+                                        </a>
+                                    </span>
+                                    <span class="px-1">
+                                        <a class="link-underline link-underline-opacity-0" href="https://github.com/PatrickStankard/transit-alarm/releases/download/v1.0.0/TransitAlarmforMTA-v1.0.0.apk" title="Download Transit Alarm for MTA for Android" target="_blank">
+                                            <img class="app-store-badge rounded" src="/png/android-apk-badge.png" alt="Download Transit Alarm for Android">
+                                        </a>
+                                    </span>
+                                </div>
+                                <div class="text-center">
+                                    <span class="px-1">
+                                        <a class="link-underline link-underline-opacity-0" href="https://github.com/PatrickStankard/transit-alarm" title="Transit Alarm for MTA on GitHub" target="_blank">
+                                            <img class="github-badge rounded" src="/svg/github-badge.svg" alt="Transit Alarm for MTA on GitHub">
+                                        </a>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- End AppStoreBadges -->
+            </div>
+            <!-- End BodyContentContainer -->
+        </div>
+        <!-- End BodyContainer -->
+        <script src="./js/index.js" type="module"></script>
+    </body>
+</html>

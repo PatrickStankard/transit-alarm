@@ -1,0 +1,21 @@
+{
+    "appId": "com.patrickstankard.mta",
+    "appName": "Transit Alarm for MTA",
+    "webDir": "dist",
+    "plugins": {
+        "SplashScreen": {
+            "launchAutoHide": false
+        },
+        "LocalNotifications": {
+            "smallIcon": "ic_launcher_background",
+            "iconColor": "#0039a5",
+            "sound": "alarm.wav"
+        }
+    },
+    "android": {
+        "useLegacyBridge": true
+    },
+    "ios": {
+        "scheme": "TransitAlarmForMTA"
+    }
+}

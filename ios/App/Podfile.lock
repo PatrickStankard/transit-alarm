@@ -1,0 +1,58 @@
+PODS:
+  - Capacitor (5.7.8):
+    - CapacitorCordova
+  - CapacitorCommunityBackgroundGeolocation (0.0.1):
+    - Capacitor
+  - CapacitorCordova (5.7.8)
+  - CapacitorGeolocation (5.0.8):
+    - Capacitor
+  - CapacitorHaptics (5.0.8):
+    - Capacitor
+  - CapacitorLocalNotifications (5.0.8):
+    - Capacitor
+  - CapacitorSplashScreen (5.0.8):
+    - Capacitor
+  - CapacitorToast (5.0.8):
+    - Capacitor
+
+DEPENDENCIES:
+  - "Capacitor (from `../../node_modules/@capacitor/ios`)"
+  - "CapacitorCommunityBackgroundGeolocation (from `../../node_modules/@capacitor-community/background-geolocation`)"
+  - "CapacitorCordova (from `../../node_modules/@capacitor/ios`)"
+  - "CapacitorGeolocation (from `../../node_modules/@capacitor/geolocation`)"
+  - "CapacitorHaptics (from `../../node_modules/@capacitor/haptics`)"
+  - "CapacitorLocalNotifications (from `../../node_modules/@capacitor/local-notifications`)"
+  - "CapacitorSplashScreen (from `../../node_modules/@capacitor/splash-screen`)"
+  - "CapacitorToast (from `../../node_modules/@capacitor/toast`)"
+
+EXTERNAL SOURCES:
+  Capacitor:
+    :path: "../../node_modules/@capacitor/ios"
+  CapacitorCommunityBackgroundGeolocation:
+    :path: "../../node_modules/@capacitor-community/background-geolocation"
+  CapacitorCordova:
+    :path: "../../node_modules/@capacitor/ios"
+  CapacitorGeolocation:
+    :path: "../../node_modules/@capacitor/geolocation"
+  CapacitorHaptics:
+    :path: "../../node_modules/@capacitor/haptics"
+  CapacitorLocalNotifications:
+    :path: "../../node_modules/@capacitor/local-notifications"
+  CapacitorSplashScreen:
+    :path: "../../node_modules/@capacitor/splash-screen"
+  CapacitorToast:
+    :path: "../../node_modules/@capacitor/toast"
+
+SPEC CHECKSUMS:
+  Capacitor: 747aadb4fa786f460d8cd9d0557cb81440a13747
+  CapacitorCommunityBackgroundGeolocation: 6f26f4290377dbd1d6dec21e62cb66f008f61ec7
+  CapacitorCordova: 31ab98dca2ddcee051027a1afe7e8c85c82f7297
+  CapacitorGeolocation: 0572212732f7ee65828d069a9663a274be89b9fc
+  CapacitorHaptics: f59c880aa8fad7f47bb54b48d6f2d6b26279602a
+  CapacitorLocalNotifications: 5827dfaf75a52f7d29ac3a56d92cfc52b5073540
+  CapacitorSplashScreen: 7a69e693bc1ef83e4bd3fb073bd8c8fa33e9059e
+  CapacitorToast: 5967ced673b9fb9b7d7b8520c648dbd8f5064b15
+
+PODFILE CHECKSUM: f7f6b9760f1683561a4121de187b8be5f18afc52
+
+COCOAPODS: 1.15.2

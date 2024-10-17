@@ -1,0 +1,8 @@
+html, body {
+    position: fixed;
+    width: 100%
+}
+
+#body-content-container {
+    max-width: 400px;
+}

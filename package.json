@@ -1,0 +1,49 @@
+{
+  "name": "transit-alarm",
+  "version": "1.0.0",
+  "description": "Transit Alarm for MTA",
+  "type": "module",
+  "keywords": [
+    "capacitor",
+    "mobile"
+  ],
+  "scripts": {
+    "eslint": "npx eslint src/**/*.js",
+    "start": "vite",
+    "build": "vite build",
+    "sync": "npx cap sync",
+    "sync:android": "npx cap sync android",
+    "sync:ios": "npx cap sync ios",
+    "ide:android": "npx cap open android",
+    "ide:ios": "npx cap open ios",
+    "preview:android": "npx cap run android",
+    "preview:ios": "npx cap run ios",
+    "preview:web": "vite preview",
+    "deploy:web": "node scripts/deploy-web.js"
+  },
+  "dependencies": {
+    "@capacitor-community/background-geolocation": "^1.2.19",
+    "@capacitor/android": "^5.7.8",
+    "@capacitor/core": "^5.7.8",
+    "@capacitor/geolocation": "^5.0.8",
+    "@capacitor/haptics": "^5.0.8",
+    "@capacitor/ios": "^5.7.8",
+    "@capacitor/local-notifications": "file:custom-plugins/capacitor-local-notifications-5.0.8.tgz",
+    "@capacitor/splash-screen": "^5.0.8",
+    "@capacitor/toast": "^5.0.8",
+    "@ionic/pwa-elements": "^3.3.0",
+    "bootstrap": "^5.3.3"
+  },
+  "devDependencies": {
+    "@capacitor/assets": "^3.0.5",
+    "@capacitor/cli": "^5.7.8",
+    "@eslint/js": "^9.12.0",
+    "aws-sdk": "^2.1691.0",
+    "eslint": "^9.12.0",
+    "globals": "^15.11.0",
+    "mime-types": "^2.1.35",
+    "vite": "^5.4.2"
+  },
+  "author": "Patrick Stankard <me@patrickstankard.com>",
+  "license": "MIT"
+}

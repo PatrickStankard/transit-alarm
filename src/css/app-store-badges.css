@@ -1,0 +1,12 @@
+.app-store-badge {
+    width: 132px;
+    height: 44px;
+}
+
+.github-badge {
+    width: 44px;
+    height: 44px;
+    border: 1px solid #a6a6a6;
+    background-color: #000000;
+    padding: 6px;
+}
