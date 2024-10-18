@@ -138,3 +138,12 @@ android/app/release
 # iOS Time Sensitive Notifications
 custom-plugins/*
 !custom-plugins/capacitor-local-notifications-5.0.8.tgz
+
+# MTA Open Data
+data/gtfslirr/*
+!data/gtfslirr/stops.txt
+
+data/gtfsmnr/*
+!data/gtfsmnr/stops.txt
+
+data/*.zip

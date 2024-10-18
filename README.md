@@ -24,7 +24,13 @@ $ source ~/.env/transit-alarm
 $ npm install .
 ```
 
-## Build and Preview
+## Pull data from MTA Open Data
+
+```bash
+$ npm run sync:mta
+```
+
+## Build and preview
 
 ```bash
 $ npm run build
@@ -33,14 +39,14 @@ $ npm run preview:ios      # Opens an iOS simulator
 $ npm run preview:android  # Opens an Android simulator
 ```
 
-## Open the iOS or Android Project
+## Open the iOS or Android project
 
 ```bash
 $ npm run ide:ios          # Opens Xcode
 $ npm run ide:android      # Opens Android Studio
 ```
 
-## Deploy the Web App
+## Deploy the web app
 
 ```bash
 $ npm run deploy:web
