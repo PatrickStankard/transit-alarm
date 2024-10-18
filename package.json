@@ -14,6 +14,7 @@
     "sync": "npx cap sync",
     "sync:android": "npx cap sync android",
     "sync:ios": "npx cap sync ios",
+    "sync:mta": "node scripts/sync-gtfs-static-data.js && node scripts/sync-mta-colors.js && node scripts/sync-mta-subway-stations.js",
     "ide:android": "npx cap open android",
     "ide:ios": "npx cap open ios",
     "preview:android": "npx cap run android",
