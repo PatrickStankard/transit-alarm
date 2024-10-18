@@ -4,7 +4,7 @@
 // https://data.ny.gov/Transportation/MTA-General-Transit-Feed-Specification-GTFS-Static/fgm6-ccue/about_data
 
 // Long Island Rail Road (LIRR)
-// http://web.mta.info/developers/data/lirr/google_transit.zip
+// http://rrgtfsfeeds.s3.amazonaws.com/gtfslirr.zip
 // stops.txt
 export const lirrStops = [
     {
@@ -645,7 +645,7 @@ export const lirrStops = [
 ];
 
 // Metro-North Railroad (MNR)
-// http://web.mta.info/developers/data/mnr/google_transit.zip
+// http://rrgtfsfeeds.s3.amazonaws.com/gtfsmnr.zip
 // stops.txt
 export const mnrStops = [
     {
