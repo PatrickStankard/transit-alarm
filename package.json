@@ -1,6 +1,6 @@
 {
   "name": "transit-alarm",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Transit Alarm for MTA",
   "type": "module",
   "keywords": [
