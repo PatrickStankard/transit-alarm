@@ -34,6 +34,7 @@ export class TransitAlarmControls {
 
     localNotificationChannelId = null;
 
+    defaultSubtitleInnerText = "Set an alarm to be notified when you're approaching your destination.";
     locationRequiredMessage = 'Your location is required in order to notify you when you are approaching your destination.';
     unableToGetLocationMessage = 'Unable to get your location. Please check your location permissions and try again.';
     notificationsRequiredMessage = 'Notifications are required in order to notify you when you are approaching your destination.';
@@ -267,6 +268,10 @@ export class TransitAlarmControls {
 
     objectHasProperty(obj, prop) {
         return Object.prototype.hasOwnProperty.call(obj, prop);
+    }
+
+    getTransitAlarmSubtitleElement() {
+        return document.getElementById('transit-alarm-subtitle');
     }
 
     getTransitAlarmControlsFormContainerElement() {
@@ -512,6 +517,13 @@ export class TransitAlarmControls {
         const selectedCoordinates = this.stationCoordinates[selectedServiceId][selectedStation];
         const currentCoordinates = this.formatCoordinates(currentLatitude, currentLongitude);
         const currentDistance = this.calculateDistance(currentCoordinates, selectedCoordinates);
+        const subtitle = this.getTransitAlarmSubtitleElement();
+
+        if (subtitle.style.minHeight === '' && subtitle.offsetHeight > 0) {
+            subtitle.style.minHeight = subtitle.offsetHeight + 'px';
+        }
+
+        subtitle.innerHTML = 'You are <strong>' + currentDistance + ' mile(s)</strong> away from <strong>' + selectedStation + '</strong>.';
 
         if (currentDistance <= selectedDistance) {
             this.scheduleLocalNotifications(
@@ -702,6 +714,7 @@ export class TransitAlarmControls {
     enableSetAlarmUi() {
         const setAlarmButton = this.getSetAlarmButtonElement();
         const clearAlarmButton = this.getClearAlarmButtonElement();
+        const subtitle = this.getTransitAlarmSubtitleElement();
 
         this.getServiceOptionElements().forEach((serviceOption) => {
             serviceOption.disabled = false;
@@ -714,6 +727,8 @@ export class TransitAlarmControls {
 
         clearAlarmButton.disabled = true;
         this.hideElement(clearAlarmButton);
+
+        subtitle.innerText = this.defaultSubtitleInnerText;
     }
 
     formatCoordinates(latitude, longitude) {
